@@ -174,5 +174,7 @@ def big_shoe_rebounds
       big_foot = player if info[:shoe] > foot_size
     end
   end
-  return big_foot
+  game_hash.each do |location, team_info|
+    return team_info[:players][big_foot][:rebounds] if team_info[:players].include?(big_foot)
+  end
 end
