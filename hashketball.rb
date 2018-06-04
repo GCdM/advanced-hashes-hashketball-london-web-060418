@@ -162,7 +162,7 @@ end
 
 def player_stats(name)
   game_hash.each do |location, team_info|
-    return team_info[:plauers][name] if team_info[:players].include?(name)
+    return team_info[:players][name] if team_info[:players].include?(name)
   end
 end
 
