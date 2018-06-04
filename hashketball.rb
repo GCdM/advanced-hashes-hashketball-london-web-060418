@@ -120,8 +120,8 @@ end
 
 def num_points_scored(name)
   game_hash.each do |location, team_info|
-    if location[:players].include?(name)
-      return location[:players][name][:points]
+    if team_info[:players].include?(name)
+      return team_info[:players][name][:points]
     end
   end
 end
