@@ -127,63 +127,25 @@ def num_points_scored(name)
 end
 
 def shoe_size(name)
-  game_hash.each do |location, info|
-    if info[:players].include?(name)
-      return info[:players][name][:shoe]
-    end
-  end
+  
 end
 
 def team_colors(team)
-  game_hash.each do |location, info|
-    if info[:team_name] == team
-      return info[:colors]
-    end
-  end
+  
 end
 
 def team_names
-  game_hash.collect do |location, info|
-    info[:team_name]
-  end
+  
 end
 
 def player_numbers(team)
-  jerseynums = []
-  game_hash.each do |location, info|
-    if info[:team_name] == team
-      info[:players].each do |player, stats|
-        jerseynums << stats[:number]
-      end
-    end
-  end
-  jerseynums
+  
 end
 
 def player_stats(name)
-  game_hash.each do|location, info|
-    if info[:players].include?(name)
-      return info[:players][name]  
-    end
-  end
+  
 end
 
 def big_shoe_rebounds
-  reboundhash = {}
-  shoehash = {}
-  game_hash.each do |location, info|
-    info[:players].each do |player, stats|
-      shoehash[player] = stats[:shoe]
-      reboundhash[player] = stats[:rebounds]
-    end
-  end
-  foot = 0
-  bigfoot = ""
-  shoehash.each do |name, shoe|
-    if shoe > foot
-      foot = shoe
-      bigfoot = name
-    end
-  end
-  return reboundhash[bigfoot]
+  
 end
