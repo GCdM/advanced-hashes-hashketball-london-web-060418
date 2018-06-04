@@ -161,7 +161,9 @@ def player_numbers(team)
 end
 
 def player_stats(name)
-  
+  game_hash.each do |location, team_info|
+    return team_info[:plauers][name] if team_info[:players].include?(name)
+  end
 end
 
 def big_shoe_rebounds
